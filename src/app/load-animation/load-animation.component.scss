@@ -1,0 +1,36 @@
+.block-bars {
+
+  padding: 10px 0;
+
+  .bar {
+    width: 10px;
+    height: 50px;
+    margin: 0 2.3px;
+    background: #343a40;
+    animation: animateBar 700ms infinite;
+
+    &:nth-child(2){
+      animation-delay: 100ms;
+    }
+
+    &:nth-child(3){
+      animation-delay: 200ms;
+    }
+
+    &:nth-child(4){
+      animation-delay: 300ms;
+    }
+
+  }
+
+}
+
+
+@keyframes animateBar {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+}

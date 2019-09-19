@@ -1,0 +1,20 @@
+<div class="row block-detail" *ngIf="heroObject">
+  <div class="col-lg-6 block-image">
+    <img class="card-img" src="{{heroObject?.thumbnail.path}}.{{heroObject?.thumbnail.extension}}" alt="{{heroObject?.name}}">
+  </div>
+  <div class="col-lg-5 d-flex align-items-start flex-column justify-content-center">
+
+    <h2>{{heroObject?.name}}</h2>
+    <p>{{heroObject?.description}}</p>
+
+    <div class="buttons-redirect">
+      <a href="{{heroObject?.urls[0].url}}" class="btn btn-primary" target="_blank">See on Marvel's page</a>
+    </div>
+
+  </div>
+</div>
+<div class="row" *ngIf="heroObject === false">
+   <div class="col-md-12">
+     <h4 class="text-center">We cannot find this hero, please <a [routerLink]="['/heros']">come back</a> to the home page</h4>
+   </div>
+</div>
